@@ -1,0 +1,46 @@
+{
+	"appServer" : true, // defaults to true
+    "node_path" : [ "${dirname}/.." ],  // adds this directory to the NODE_PATH for DeviceJS
+	"loadApps" : [ 
+    ],	
+	"requiredServices" : [
+	     { "classpath" : "IPStack", "config" : { "wan" : "dhcp" }},
+	     { "classpath" : "HotPlug", "config" : { "verbose": true }}
+	],
+	"relay_info" : {
+		"providers" : {
+        }
+    },
+    "runtimeConfig": {
+        "appDirectories": [ "${core}", "${devjs_root}/devjs-usr/App", "${dirname}/../classes/App" ],
+        "facadeDirectories": [ "${core}", "${dirname}/../classes" ],
+        "deviceDirectories": [ "${core}", "${dirname}/../classes" ],
+        "discovererDirectories": [ "${core}", "${dirname}/../classes" ],
+        "apps": {
+            "iotivityBridge": {
+                "classpath": "IotivityBridge",
+                "config": { }
+            }
+        },
+        "rootDiscoverers": {
+            "rootUPnP" : {
+                "typeName" : "UPnPDiscoverer",
+                "config" : {        
+                }
+            }
+            
+            // "exampleDiscoverer" : {
+            //     "typeName": "ExampleDiscoverer",
+            //     "config" : {
+            //         "exampleVar" : 123
+            //     }
+            // }
+            // "LUXOM_Discoverer": {
+            //     "typeName": "LUXOM_Discoverer",
+            //     "config": {
+            //         "confFile": "${dirname}/luxom.conf" // means the [same directory as this file]/luxom.conf
+            //     }
+            // }
+        }
+    }
+}

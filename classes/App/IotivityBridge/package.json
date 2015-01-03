@@ -1,0 +1,11 @@
+{
+  "name": "devjs-iotivity",
+  "version": "0.0.1",
+  "description": "DeviceJS module for the iotivity.org stack",
+  "author": "Ed <ed@wigwag.com>",
+  "dependencies": {
+	"iotivity" : "*",
+        "lru-cache" : "*"
+  },
+  "devDependencies": {}
+}
