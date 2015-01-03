@@ -4,7 +4,7 @@
   "description": "DeviceJS module for the iotivity.org stack",
   "author": "Ed <ed@wigwag.com>",
   "dependencies": {
-	"iotivity" : "*",
+	"iotivity" : "git://github.com/WigWagCo/node-iotivity.git#842b7b8118c5b52f7bfdc3fcdeb71f7655652f2c",
         "lru-cache" : "*"
   },
   "devDependencies": {}
